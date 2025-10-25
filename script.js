@@ -11,6 +11,11 @@ function calculate() {
 
   let result;
 
+  if (isNaN(firstNumber) || isNaN(secondNumber)) {
+    resultParagraph.textContent = 'Please enter a valid number';
+    return;
+  }
+
   if (operator === '+') {
     result = firstNumber + secondNumber;
   } else if (operator === '-') {
@@ -18,6 +23,10 @@ function calculate() {
   } else if (operator === '*') {
     result = firstNumber * secondNumber;
   } else if (operator === '/') {
+    if (secondNumber === 0) {
+      resultParagraph.textContent = 'Division by zero is not allowed';
+      return;
+    }
     result = firstNumber / secondNumber;
   } else {
     result = 'Invalid operator';
