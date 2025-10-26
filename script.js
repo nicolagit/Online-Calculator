@@ -16,20 +16,25 @@ function calculate() {
     return;
   }
 
-  if (operator === '+') {
-    result = firstNumber + secondNumber;
-  } else if (operator === '-') {
-    result = firstNumber - secondNumber;
-  } else if (operator === '*') {
-    result = firstNumber * secondNumber;
-  } else if (operator === '/') {
-    if (secondNumber === 0) {
-      resultParagraph.textContent = 'Division by zero is not allowed';
-      return;
-    }
-    result = firstNumber / secondNumber;
-  } else {
-    result = 'Invalid operator';
+  switch (operator) {
+    case '+':
+      result = firstNumber + secondNumber;
+      break;
+    case '-':
+      result = firstNumber - secondNumber;
+      break;
+    case '*':
+      result = firstNumber * secondNumber;
+      break;
+    case '/':
+      if (secondNumber === 0) {
+        resultParagraph.textContent = 'Division by zero is not allowed';
+        return;
+      }
+      result = firstNumber / secondNumber;
+      break;
+    default:
+      result = 'Invalid operator';
   }
 
   resultParagraph.textContent = 'Result: ' + result;
