@@ -20,6 +20,49 @@
       <button id="calculate">Calculate</button>
       <p id="result">Result will be displayed here</p>
     </div>
+
     <script src="script.js"></script>
+
+    <script>
+      function printEvenNumbers() {
+        // Write a loop that prints all even numbers from 2 to 20.
+        for (let i = 2; i <= 20; i += 2) {
+          console.log(i);
+        }
+      }
+      printEvenNumbers();
+    </script>
+
+    <script>
+      function calculateFactorial(number) {
+        // Write a loop to calculate the factorial of a given number.
+        let factorial = 1;
+        for (let i = 1; i <= number; i++) {
+          factorial *= i;
+        }
+        console.log(factorial);
+        return factorial;
+      }
+      calculateFactorial(5);
+    </script>
+
+    <script>
+      function guessTheNumber() {
+        // Use a loop to keep asking for guesses until they get it right.
+        const targetNumber = Math.floor(Math.random() * 100) + 1;
+        let guess = null;
+        while (guess !== targetNumber) {
+          guess = parseInt(prompt('Guess a number between 1 and 100:'));
+          if (guess < targetNumber) {
+            alert('Too low! Try again.');
+          } else if (guess > targetNumber) {
+            alert('Too high! Try again.');
+          } else {
+            alert('Congratulations! You guessed the number.');
+          }
+        }
+      }
+      guessTheNumber();
+    </script>
   </body>
 </html>
