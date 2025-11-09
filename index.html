@@ -62,7 +62,28 @@
           }
         }
       }
-      guessTheNumber();
+      //guessTheNumber();
+    </script>
+    <script>
+      function manipulateCities() {
+        // 1. Create an array called 'cities' containing at least 5 different city names.
+        const cities = [
+          'New York',
+          'Los Angeles',
+          'Chicago',
+          'Houston',
+          'Phoenix',
+        ];
+        // 2. Use 'console.log' to display the second city in the array.
+        console.log(cities[1]);
+        // 3. Add a new city to the end of the array.
+        cities.push('San Francisco');
+        // 4. Remove the first city from the array.
+        cities.shift();
+        // 5. Display the updated items of that array one-by-one.
+        cities.forEach((city) => console.log(city));
+      }
+      manipulateCities();
     </script>
   </body>
 </html>
